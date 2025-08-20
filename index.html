@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Construcción de Software</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .infographic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: var(--secondary);
+            font-size: 1.2rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .info-card {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+        }
+        
+        .card-content {
+            color: var(--dark);
+        }
+        
+        .card-content ul {
+            list-style-type: none;
+        }
+        
+        .card-content li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .card-content li:before {
+            content: "•";
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent);
+            margin: 30px 0;
+        }
+        
+        .highlight-title {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .phase-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 30px 0;
+            gap: 15px;
+        }
+        
+        .phase {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--secondary), #2980b9);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .phase-number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: white;
+            color: var(--secondary);
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .phase-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="infographic-container">
+        <header>
+            <h1>Construcción de Software</h1>
+            <p class="subtitle">Transformando ideas en código funcional</p>
+        </header>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h2 class="card-title">¿Qué es?</h2>
+                <div class="card-content">
+                    <p>Proceso de crear software significativo y funcional mediante:</p>
+                    <ul>
+                        <li>Codificación</li>
+                        <li>Verificación</li>
+                        <li>Pruebas unitarias</li>
+                        <li>Pruebas de integración</li>
+                        <li>Depuración (debugging)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h2 class="card-title">Importancia</h2>
+                <div class="card-content">
+                    <ul>
+                        <li>Área de conocimiento fundamental en el CBOK para Maestrías en Ingeniería de Software</li>
+                        <li>Cubre fundamentos, elementos básicos y buenas prácticas</li>
+                        <li>Paso esencial que incluye revisión por pares para identificar problemas temprano</li>
+                        <li>Contribuye a entregar software de mayor calidad en menos tiempo</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h2 class="card-title">Principios Clave</h2>
+                <div class="card-content">
+                    <ul>
+                        <li>Modularidad: Facilita construcción, depuración y reutilización de código</li>
+                        <li>Simplicidad en el diseño</li>
+                        <li>Pruebas automatizadas</li>
+                        <li>Seguir estándares y prácticas establecidas</li>
+                        <li>Uso de control de versiones (Git)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight">
+            <h2 class="highlight-title">Fase de Implementación</h2>
+            <p>Es donde las ideas y diseños se transforman en código. Los programadores escriben código fuente siguiendo estándares establecidos, implementan funcionalidades de forma modular, realizan pruebas unitarias y utilizan sistemas de control de versiones.</p>
+        </div>
+        
+        <h2 style="text-align: center; color: var(--primary); margin: 30px 0 20px;">Etapas en la Construcción de Software</h2>
+        
+        <div class="phase-container">
+            <div class="phase">
+                <div class="phase-number">1</div>
+                <h3>Codificación</h3>
+                <p>Escribir el código fuente según especificaciones de diseño</p>
+            </div>
+            
+            <div class="phase">
+                <div class="phase-number">2</div>
+                <h3>Verificación</h3>
+                <p>Revisar que el código cumple con los requisitos</p>
+            </div>
+            
+            <div class="phase">
+                <div class="phase-number">3</div>
+                <h3>Pruebas</h3>
+                <p>Unitarias y de integración para validar funcionamiento</p>
+            </div>
+            
+            <div class="phase">
+                <div class="phase-number">4</div>
+                <h3>Depuración</h3>
+                <p>Identificar y corregir errores en el código</p>
+            </div>
+        </div>
+        
+        <div class="info-card" style="margin-top: 30px;">
+            <h2 class="card-title">Rol del Programador</h2>
+            <div class="card-content">
+                <ul>
+                    <li>Escribe código fuente para instruir a los ordenadores</li>
+                    <li>Interpreta directrices de desarrolladores e ingenieros</li>
+                    <li>Utiliza lenguajes de programación como C++, Java, etc.</li>
+                    <li>Trabaja dentro del ciclo de vida de desarrollo de software</li>
+                </ul>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Infografía basada en el documento proporcionado sobre Construcción de Software</p>
+            <p>Fuentes: Román (2023), Camilloni (2015), TutorDigital (2025), IBM, Los Principios Básicos Del Desarrollo De Software</p>
+        </footer>
+    </div>
+</body>
+</html>
